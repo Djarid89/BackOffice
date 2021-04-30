@@ -1,0 +1,5 @@
+<mat-grid-list cols="4">
+    <mat-grid-tile *ngFor="let tile of products" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+        <app-item></app-item>
+    </mat-grid-tile>
+</mat-grid-list>
