@@ -10,12 +10,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RequestInterceptor } from './interceptors/http-interceptor';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemsContainerComponent,
-    ItemComponent
+    ItemComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,

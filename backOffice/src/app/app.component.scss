@@ -1,9 +1,11 @@
 .mat-drawer-container{
     background-color: white;
+    border-top: 1px solid black;
     color: white;
 }
 
 .mat-drawer {
     background-color: white;
     border-right: 1px solid black;
+    width: 250px;
 }
