@@ -1,5 +1,7 @@
-<mat-grid-list cols="4">
-    <mat-grid-tile *ngFor="let product of products" [colspan]="4" [rowspan]="1">
-        <app-item [item]="product"></app-item>
-    </mat-grid-tile>
-</mat-grid-list>
+<div *ngIf="products$ | async as products">
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let product of products">
+            <app-item [item]="product"></app-item>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

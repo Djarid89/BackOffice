@@ -1,11 +1,17 @@
-.mat-drawer-container{
-    background-color: white;
-    border-top: 1px solid black;
-    color: white;
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    margin: 24px 0;
 }
 
-.mat-drawer {
-    background-color: white;
-    border-right: 1px solid black;
-    width: 250px;
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.items-container-width {
+    width: 400px;
 }

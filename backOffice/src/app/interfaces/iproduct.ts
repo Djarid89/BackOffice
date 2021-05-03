@@ -1,7 +1,11 @@
 export interface IProduct {
-    title: string;
-    category: string;
-    price: number;
-    employee: string;
-    description: string;
+    id: string;
+    data: {
+        price: number,
+        title: string,
+        reviews: string[],
+        category: string,
+        description: string,
+        employee: string
+    };
 }
