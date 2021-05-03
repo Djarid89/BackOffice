@@ -1,20 +1,19 @@
-import { ItemsConteinerServices, Product } from './../services/items-conteiner.service';
-import { Component, OnInit } from '@angular/core';
+import { Product } from '../services/products.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-items-container',
   templateUrl: './items-container.component.html',
-  styleUrls: ['./items-container.component.scss'],
-  providers: [ItemsConteinerServices]
+  styleUrls: ['./items-container.component.scss']
 })
 export class ItemsContainerComponent implements OnInit {
 
-  products$: Observable<Product[]> | undefined;
+  @Input() products: Product[] | undefined;
 
-  constructor(private service: ItemsConteinerServices) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.products$ = this.service.getProducts();
+    
   }
 }

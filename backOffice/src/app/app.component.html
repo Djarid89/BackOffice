@@ -1,8 +1,8 @@
-<div *ngIf="store$ | async as store">
-    <div class="title">{{store?.name}}</div>
-    <div class="center">
+<div *ngIf="showwAll$">
+    <div class="title" *ngIf="store$ | async as store">{{store?.name}}</div>
+    <div class="center" *ngIf="products$ | async as products">
         <div class="items-container-width">
-            <app-items-container></app-items-container>
+            <app-items-container [products]="products"></app-items-container>
         </div>
     </div>
 </div>
