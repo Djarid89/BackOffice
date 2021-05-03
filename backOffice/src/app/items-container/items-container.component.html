@@ -1,5 +1,5 @@
 <mat-grid-list cols="4">
-    <mat-grid-tile *ngFor="let tile of products" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-        <app-item></app-item>
+    <mat-grid-tile *ngFor="let product of products" [colspan]="4" [rowspan]="1">
+        <app-item [item]="product"></app-item>
     </mat-grid-tile>
 </mat-grid-list>

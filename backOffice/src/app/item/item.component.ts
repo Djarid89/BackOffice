@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { IProduct } from './../interfaces/iproduct';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemComponent implements OnInit {
 
+  @Input() item: IProduct | undefined;
+
   constructor() { }
 
   ngOnInit(): void {
+    debugger;
   }
 
 }
