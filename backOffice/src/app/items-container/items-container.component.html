@@ -1,5 +1,25 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile *ngFor="let product of products">
-        <app-item [item]="product"></app-item>
-    </mat-grid-tile>
-</mat-grid-list>
+<table>
+  <header>
+    <tr>
+      <th class="w20">Titolo</th>
+      <th class="w30">Descrizione</th>
+      <th class="w10">Categoria</th>
+      <th class="w5">Prezzo</th>
+      <th class="w15">Impiegato</th>
+      <th class="w30">Commenti</th>
+      <th class="w5"></th>
+    </tr>
+  </header>
+  <section>
+    <tr *ngFor="let product of products">
+      <td class="w20">{{product.title}}</td>
+      <td class="w30">{{product.description}}</td>
+      <td class="w10">{{product.category}}</td>
+      <td class="w5">{{product.price}}</td>
+      <td class="w15">{{product.employee}}</td>
+      <td class="w30"><div *ngFor="let review of product.reviews">{{review}}</div></td>
+      <td class="w5" (click)="remove()">🗑️</td>
+    </tr>
+  </section>
+  <div class="adder" (click)="add()">ADD</div>
+</table>

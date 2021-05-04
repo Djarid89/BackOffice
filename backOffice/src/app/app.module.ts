@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ItemsContainerComponent } from './items-container/items-container.component';
-import { ItemComponent } from './item/item.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -14,8 +13,7 @@ import { RequestInterceptor } from './interceptors/http-interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    ItemsContainerComponent,
-    ItemComponent
+    ItemsContainerComponent
   ],
   imports: [
     BrowserModule,

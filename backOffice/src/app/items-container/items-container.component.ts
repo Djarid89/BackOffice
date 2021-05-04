@@ -14,6 +14,13 @@ export class ItemsContainerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+  }
+
+  remove(): void {
+
+  }
+
+  add(): void {
+
   }
 }

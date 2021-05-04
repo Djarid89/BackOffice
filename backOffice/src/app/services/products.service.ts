@@ -8,9 +8,6 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ItemsConteinerServices {
-  getStoreInfo(): import("rxjs").ObservableInput<unknown> {
-    throw new Error('Method not implemented.');
-  }
 
   constructor(private http: HttpClient) { }
 
