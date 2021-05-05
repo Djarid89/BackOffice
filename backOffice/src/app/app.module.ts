@@ -4,16 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ItemsContainerComponent } from './items-container/items-container.component';
+import { ProductsContainerComponent } from './products-container/products-container.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RequestInterceptor } from './interceptors/http-interceptor';
+import { NewProductComponent } from './new-product/new-product.component';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ItemsContainerComponent
+    ProductsContainerComponent,
+    NewProductComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +27,11 @@ import { RequestInterceptor } from './interceptors/http-interceptor';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    FormsModule,
+    MatIconModule,
+    MatSelectModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true }

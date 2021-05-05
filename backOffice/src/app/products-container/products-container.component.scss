@@ -1,6 +1,5 @@
 table {
   border-collapse: collapse;
-  margin-top: 50px;
 }
 
 table th {
@@ -19,10 +18,6 @@ th, td {
   padding: 10px 15px;
 }
 
-div.adder {
-  padding: 10px 15px;
-}
-
 table section tr:nth-child(odd) {
   background: #CCC
 }
@@ -37,4 +32,12 @@ table section tr:nth-child(even) {
    width: $i*10px !important;
    max-width: $i*10px !important;
   }
+}
+
+button.adder {
+  padding: 10px;
+}
+
+button.adder, app-new-item {
+  margin-bottom: 15px;
 }
