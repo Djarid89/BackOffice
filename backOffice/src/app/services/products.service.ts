@@ -18,8 +18,7 @@ export class ProductsServices {
   }
 
   addProducts(product: Product | undefined): Observable<any> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-    return this.http.post<any>('products', product, { headers, responseType: 'text' as 'json' });
+    return this.http.post<any>('products', product, { responseType: 'text' as 'json' });
   }
 
   getProduct(idProduct: string): Observable<Product> {
