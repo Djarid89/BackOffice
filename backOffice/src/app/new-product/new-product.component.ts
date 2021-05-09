@@ -39,8 +39,8 @@ export class NewProductComponent implements OnInit {
     );
   }
 
-  back(): void {
-    this.location.back();
+  goBack(): void {
+    this.newProduct.emit(false);
   }
 
 }
