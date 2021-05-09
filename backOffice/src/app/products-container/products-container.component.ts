@@ -12,6 +12,7 @@ export class ProductsContainerComponent implements OnInit {
   @Output() newProduct = new EventEmitter<boolean>();
   @Input() products: Product[] | undefined;
   showAdd = false;
+  viewer = new Viewer();
 
   constructor(private productsService: ProductsServices, private router: Router) { }
 
@@ -31,5 +32,17 @@ export class ProductsContainerComponent implements OnInit {
 
   showNewProduct(): void {
     this.newProduct.emit(true);
+  }
+}
+
+class Viewer {
+  table = true;
+  grid = false;
+
+  toogle(): void {
+    // tslint:disable-next-line: no-unused-expression
+    this.table = !this.table;
+    // tslint:disable-next-line: no-unused-expression
+    this.grid = !this.grid;
   }
 }

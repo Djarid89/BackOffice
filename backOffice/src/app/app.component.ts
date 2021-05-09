@@ -18,7 +18,14 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     forkJoin([this.storeService.getStoreInfo(), this.productsService.getProducts()]).subscribe(
-      value => { this.store = value[0]; this.products = value[1]; }
+      value => {
+        this.store = value[0];
+        this.products = value[1].sort((a, b) => {
+          const textA = a.title.toUpperCase();
+          const textB = b.title.toUpperCase();
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
+      }
     );
   }
 

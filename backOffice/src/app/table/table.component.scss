@@ -1,0 +1,27 @@
+table {
+  border-collapse: collapse;
+}
+
+table th {
+  text-align: left;
+  vertical-align: middle;
+}
+
+table td:last-child {
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+th, td {
+  width: 250px;
+  padding: 10px 15px;
+}
+
+table section tr:nth-child(odd) {
+  background: #CCC
+}
+
+table section tr:nth-child(even) {
+  background: #FFF
+}

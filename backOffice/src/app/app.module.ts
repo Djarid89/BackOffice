@@ -14,12 +14,16 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { TableComponent } from './table/table.component';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsContainerComponent,
-    NewProductComponent
+    NewProductComponent,
+    TableComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,

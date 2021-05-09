@@ -1,37 +1,35 @@
-<h2>Aggiungi nuovo prodotto</h2>
-<form class="form">
+<form>
     <p>
-        <mat-form-field class="full-width">
+        <mat-form-field>
             <mat-label>Titolo</mat-label>
             <input matInput type="text" name="title" [(ngModel)]="title">
         </mat-form-field>
     </p>
     <p>
-        <mat-form-field class="full-width">
+        <mat-form-field>
             <mat-label>Descrizione</mat-label>
             <input matInput type="text" name="description" [(ngModel)]="description">
         </mat-form-field>
     </p>
     <p>
-        <mat-form-field class="full-width">
+        <mat-form-field>
             <mat-label>Categoria</mat-label>
             <input matInput type="text" name="category" [(ngModel)]="category">
-            <!-- <mat-select name="category" [(ngModel)]="category">
-                <mat-option *ngFor="let category of categories" [value]="category.category">{{category.category}}</mat-option>
-            </mat-select> -->
         </mat-form-field>
     </p>
     <p>
-        <mat-form-field class="full-width">
+        <mat-form-field>
             <mat-label>Prezzo</mat-label>
             <input matInput type="number" name="price" [(ngModel)]="price">
         </mat-form-field>
     </p>
     <p>
-        <mat-form-field class="full-width">
+        <mat-form-field>
             <mat-label>Impiegato</mat-label>
             <input matInput type="text" name="employee" [(ngModel)]="employee">
         </mat-form-field>
     </p>
+    <div class="center">
+        <span class="material-icons click" (click)="add()">done</span>
+    </div>
 </form>
-<button mat-raised-button (click)="add()">Add new product</button>

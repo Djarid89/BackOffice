@@ -2,3 +2,19 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.click {
+    cursor: pointer;
+}
+
+.right {
+    float: left;
+}
+
+@for $i from 1 through 130 {
+  .w#{$i} {
+   min-width: $i*10px !important;
+   width: $i*10px !important;
+   max-width: $i*10px !important;
+  }
+}

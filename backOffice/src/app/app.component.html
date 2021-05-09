@@ -1,9 +1,9 @@
-<div class="title">{{store?.name}}</div>
 <div class="center" *ngIf="products?.length">
-    <div *ngIf="!newProduct">
+    <div class="w128" *ngIf="!newProduct">
+        <div class="title">{{store?.name}}</div>
         <app-products-container [products]="products" (newProduct)="showNewProduct($event)"></app-products-container>
     </div>
-    <div *ngIf="newProduct">
+    <div class="w128" *ngIf="newProduct">
         <app-new-product (updateProducts)="addProduct($event)" (newProduct)="showNewProduct($event)"></app-new-product>
     </div>
 </div>

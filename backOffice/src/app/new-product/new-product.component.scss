@@ -1,13 +1,19 @@
-.form {
+form {
   min-width: 500px;
   max-width: 1000px;
   width: 100%;
+  margin: 30px 0 20px 0;
 }
 
-.full-width {
+mat-form-field {
   width: 100%;
 }
 
-h2 {
-  margin: 20px 0;
+button {
+  padding: 10px;
+}
+
+div.center {
+  display: flex;
+  justify-content: center;
 }

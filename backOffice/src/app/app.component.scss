@@ -1,4 +1,4 @@
-.title {
+div.title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,8 +6,9 @@
     margin: 24px 0;
 }
 
-.center {
+div.center {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 1280px;
 }
