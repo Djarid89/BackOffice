@@ -16,6 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { TableComponent } from './table/table.component';
 import { GridComponent } from './grid/grid.component';
+import { ChartsModule } from 'ng2-charts';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { GridComponent } from './grid/grid.component';
     ProductsContainerComponent,
     NewProductComponent,
     TableComponent,
-    GridComponent
+    GridComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { GridComponent } from './grid/grid.component';
     MatInputModule,
     FormsModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    ChartsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true }

@@ -1,3 +1,4 @@
+import { map } from 'rxjs/operators';
 import { Icategory } from './../interfaces/icategory';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -10,10 +11,13 @@ export class CategoryService implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  // tslint:disable-next-line: contextual-lifecycle
   ngOnInit(): void {
   }
 
-  getCategories(): Observable<Icategory[]> {
-    return this.http.get<Icategory[]>('stats/categories');
+  getCategoriesDescr(): Observable<string[]> {
+    return this.http.get<Icategory[]>('stats/categories').pipe(
+      map(category => category.map(cat => cat.category))
+    );
   }
 }

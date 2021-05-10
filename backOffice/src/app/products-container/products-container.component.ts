@@ -38,11 +38,21 @@ export class ProductsContainerComponent implements OnInit {
 class Viewer {
   table = true;
   grid = false;
+  chart = false;
 
-  toogle(): void {
-    // tslint:disable-next-line: no-unused-expression
-    this.table = !this.table;
-    // tslint:disable-next-line: no-unused-expression
-    this.grid = !this.grid;
+  toogle(value: string): void {
+    this.table = false;
+    this.grid = false;
+    this.chart = false;
+
+    if (value === 'table') {
+      this.table = true;
+    }
+    else if (value === 'grid') {
+      this.grid = true;
+    }
+    else if (value === 'chart') {
+      this.chart = true;
+    }
   }
 }
