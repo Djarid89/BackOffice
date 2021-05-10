@@ -26,7 +26,6 @@ export class NewProductComponent implements OnInit {
   constructor(private productsService: ProductsServices, private categoryService: CategoryService, private location: Location) { }
 
   ngOnInit(): void {
-    this.categoryService.getCategories().subscribe(categories => this.categories = categories);
   }
 
   add(): void {

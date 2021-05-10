@@ -1,6 +1,7 @@
 div.container {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
 }
 
 div.container > div:nth-child(3n) {
@@ -16,7 +17,7 @@ div.container > div:nth-child(even) {
 }
 
 div.container > div {
-    width: 398px;
+    width: 373px;
     border: 1px solid black;
     padding: 10px;
     margin: 0 10px 10px 0;
