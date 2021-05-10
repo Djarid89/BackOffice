@@ -1,6 +1,6 @@
-<div class="viewer">
-    <span (click)="viewer.toogle('table')" class="material-icons click">grid_view</span>
-    <span (click)="viewer.toogle('grid')" class="material-icons click">table_view</span>
+<div class="viewer" (click)="orderData()">
+    <span (click)="viewer.toogle('grid')" class="material-icons click">grid_view</span>
+    <span (click)="viewer.toogle('table')" class="material-icons click">table_view</span>
     <span (click)="viewer.toogle('chart')" class="material-icons click">pie_chart</span>
 </div>
 <div *ngIf="viewer.table || viewer.grid" class="left material-icons click" (click)="showNewProduct()">add_circle_outline</div>

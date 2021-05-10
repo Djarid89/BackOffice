@@ -33,6 +33,14 @@ export class ProductsContainerComponent implements OnInit {
   showNewProduct(): void {
     this.newProduct.emit(true);
   }
+
+  orderData(): void {
+    this.products = this.products?.sort((a, b) => {
+      const textA = a.title.toUpperCase();
+      const textB = b.title.toUpperCase();
+      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    });
+  }
 }
 
 class Viewer {

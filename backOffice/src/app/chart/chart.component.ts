@@ -13,11 +13,10 @@ import { Product } from '../services/products.service';
 export class ChartComponent implements OnInit {
 
   @Input() products: Product[] | undefined;
-  categories: string[] = [];
 
   barChartOptions: ChartOptions = { responsive: true };
   barChartLabels: Label[] = [];
-  barChartType: ChartType = 'pie';
+  barChartType: ChartType = 'polarArea';
   barChartLegend = true;
   barChartPlugins = [];
 
@@ -31,22 +30,30 @@ export class ChartComponent implements OnInit {
   ngOnInit(): void {
     this.categoryService.getCategoriesDescr().pipe(
       finalize(() => {
-        this.barChartLabels = this.categories;
-        this.barChartData[0].data = this.categories?.map(category => {
+
+      })
+    ).subscribe(
+      (categories) => {
+        this.barChartLabels = categories;
+        this.barChartData[0].data = categories?.map(category => {
           return this.products?.reduce((acc, product) => {
             if (category === product.category) {
               acc += 1;
             }
             return acc;
-          }, 0);
+          }
+          , 0);
         });
-      })
-    ).subscribe(
-      (category) => {
-        this.categories = category;
+        this.barChartData[0].backgroundColor = categories?.map(() => {
+          return 'rgb(' + this.generateNumber() + ',' + this.generateNumber() + ',' + this.generateNumber() + ')';
+        });
       },
       () => 'ToDo'
     );
+  }
+
+  generateNumber(): string {
+    return Math.floor(Math.random() * 256).toString();
   }
 
 }
