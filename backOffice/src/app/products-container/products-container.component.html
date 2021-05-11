@@ -4,6 +4,7 @@
     <span (click)="viewer.toogle('chart')" class="material-icons click">pie_chart</span>
 </div>
 <div *ngIf="viewer.table || viewer.grid" class="left material-icons click" (click)="showNewProduct()">add_circle_outline</div>
+<div *ngIf="error != ''" class="error">{{error}}</div>
 <div *ngIf="viewer.table">
   <app-table [products]="products" (remove)="remove($event)"></app-table>
 </div>

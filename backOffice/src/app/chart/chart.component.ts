@@ -12,6 +12,8 @@ import { Product } from '../services/products.service';
 })
 export class ChartComponent implements OnInit {
 
+  error = '';
+
   @Input() products: Product[] | undefined;
 
   barChartOptions: ChartOptions = { responsive: true };
@@ -28,11 +30,7 @@ export class ChartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.categoryService.getCategoriesDescr().pipe(
-      finalize(() => {
-
-      })
-    ).subscribe(
+    this.categoryService.getCategoriesDescr().subscribe(
       (categories) => {
         this.barChartLabels = categories;
         this.barChartData[0].data = categories?.map(category => {
@@ -47,8 +45,9 @@ export class ChartComponent implements OnInit {
         this.barChartData[0].backgroundColor = categories?.map(() => {
           return 'rgb(' + this.generateNumber() + ',' + this.generateNumber() + ',' + this.generateNumber() + ')';
         });
+        this.error = '';
       },
-      () => 'ToDo'
+      () => this.error = 'Errore durante il caricamento delle categorie'
     );
   }
 

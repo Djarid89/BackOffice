@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ProductsContainerComponent implements OnInit {
 
+  error = '';
+
   @Output() newProduct = new EventEmitter<boolean>();
   @Input() products: Product[] | undefined;
   showAdd = false;
@@ -26,11 +28,14 @@ export class ProductsContainerComponent implements OnInit {
         if (index !== undefined && index > -1) {
           this.products?.splice(index, 1);
         }
-      }
+        this.error = '';
+      },
+      () => this.error = 'Errore durante l\'eliminazione del prodotto'
     );
   }
 
   showNewProduct(): void {
+    this.error = '';
     this.newProduct.emit(true);
   }
 
