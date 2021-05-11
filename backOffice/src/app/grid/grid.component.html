@@ -1,10 +1,11 @@
 <div class="container">
     <div *ngFor="let product of products">
-        <div>{{product.title}}</div>
-        <div>{{product.description}}</div>
-        <div>{{product.category}}</div>
-        <div>{{product.price| currency:'EUR'}}</div>
-        <div>{{product.employee}}</div>
+        <div><span class="bold">Titolo </span><span>{{product.title}}</span></div>
+        <div><span class="bold">Descrizione </span><span>{{product.description}}</span></div>
+        <div><span class="bold">Categoria </span><span>{{product.category}}</span></div>
+        <div><span class="bold">Prezzo </span><span>{{product.price| currency:'EUR'}}</span></div>
+        <div><span class="bold">Impiegato </span><span>{{product.employee}}</span></div>
+        <div *ngIf="product.reviews?.length"><span class="bold">Commenti</span></div>
         <div *ngFor="let review of product.reviews">{{review}}</div>
         <div class="click" (click)="emitRemove(product)">🗑️</div>
     </div>

@@ -1,6 +1,5 @@
 import { ProductsServices as ProductsServices, Product } from '../services/products.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products-container',
@@ -16,7 +15,7 @@ export class ProductsContainerComponent implements OnInit {
   showAdd = false;
   viewer = new Viewer();
 
-  constructor(private productsService: ProductsServices, private router: Router) { }
+  constructor(private productsService: ProductsServices) { }
 
   ngOnInit(): void {
   }
