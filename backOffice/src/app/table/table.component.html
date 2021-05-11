@@ -4,7 +4,7 @@
             <th class="w20">Titolo</th>
             <th class="w25">Descrizione</th>
             <th class="w10">Categoria</th>
-            <th class="w5">Prezzo</th>
+            <th class="w10">Prezzo</th>
             <th class="w15">Impiegato</th>
             <th class="w25">Commenti</th>
             <th class="w5"></th>
@@ -15,7 +15,7 @@
             <td class="w20">{{product.title}}</td>
             <td class="w25">{{product.description}}</td>
             <td class="w10">{{product.category}}</td>
-            <td class="w5">{{product.price | currency:'EUR'}}</td>
+            <td class="w10">{{product.price | currency:'EUR'}}</td>
             <td class="w15">{{product.employee}}</td>
             <td class="w25">
                 <div *ngFor="let review of product.reviews">{{review}}</div>

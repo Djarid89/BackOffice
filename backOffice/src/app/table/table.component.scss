@@ -3,7 +3,6 @@ table {
 }
 
 table th {
-  text-align: left;
   vertical-align: middle;
 }
 
@@ -13,9 +12,10 @@ table td:last-child {
   cursor: pointer;
 }
 
-th, td {
+table th, table td {
   width: 250px;
-  padding: 10px 15px;
+  padding: 10px 10px;
+  text-align: center;
 }
 
 table section tr:nth-child(odd) {
